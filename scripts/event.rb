@@ -6,7 +6,7 @@ require 'json'
 require 'date'
 
 module Ruboty
-  class PING2 < Handlers::Base
+  class Event < Handlers::Base
     on /event(.*)\z/i, name: 'event', description: 'next event infomation'
     API_URL = 'http://great-h.github.io/event.json'
 
