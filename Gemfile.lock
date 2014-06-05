@@ -10,10 +10,12 @@ GEM
     addressable (2.3.6)
     buftok (0.2.0)
     coderay (1.1.0)
+    daemons (1.1.9)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
     equalizer (0.0.9)
+    eventmachine (1.0.3)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     http (0.6.1)
@@ -32,6 +34,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    rack (1.5.2)
     ruboty (1.0.1)
       activesupport
       bundler
@@ -43,6 +46,10 @@ GEM
       twitter (>= 5.0.0)
     simple_oauth (0.2.0)
     slop (3.5.0)
+    thin (1.6.2)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
     thread_safe (0.3.4)
     twitter (5.9.0)
       addressable (~> 2.3)
@@ -65,3 +72,4 @@ DEPENDENCIES
   pry
   ruboty
   ruboty-twitter
+  thin

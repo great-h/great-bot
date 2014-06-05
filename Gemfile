@@ -3,4 +3,8 @@ ruby '2.1.2'
 
 gem 'ruboty'
 gem 'ruboty-twitter'
-gem 'pry'
+gem 'thin'
+
+group :development do
+  gem 'pry'
+end
