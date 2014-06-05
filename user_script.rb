@@ -1,4 +1,6 @@
 logger = Ruboty.logger
 logger.debug('load: ' + __FILE__)
 
-require_relative 'scripts/ping2'
+Dir.glob('scripts/**') do |path|
+  require_relative path
+end
