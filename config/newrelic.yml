@@ -42,7 +42,7 @@ common: &default_settings
   #       - Ajax Service
   #       - All Services
   #
-  app_name: My Application
+  app_name: great-bot
 
   # When "true", the agent collects performance data about your
   # application and reports this data to the New Relic service at
@@ -57,7 +57,7 @@ common: &default_settings
   # The newrelic agent generates its own log file to keep its logging
   # information separate from that of your application. Specify its
   # log level here.
-  log_level: info
+  log_level: debug
 
   # Optionally set the path to the log file This is expanded from the
   # root directory (may be relative or absolute, e.g. 'log/' or
