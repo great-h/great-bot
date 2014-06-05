@@ -1,1 +1,1 @@
-web: bundle exec ruboty -l script.rb
+web: bundle exec ruboty -l user_script.rb
