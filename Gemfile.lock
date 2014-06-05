@@ -30,6 +30,7 @@ GEM
     minitest (5.3.4)
     multipart-post (2.0.0)
     naught (1.0.0)
+    newrelic_rpm (3.8.1.221)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -69,6 +70,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  newrelic_rpm
   pry
   ruboty
   ruboty-twitter

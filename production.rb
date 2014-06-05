@@ -1,3 +1,5 @@
+require 'newrelic_rpm'
+
 require_relative 'user_script'
 
 require 'thread'
