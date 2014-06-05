@@ -18,7 +18,7 @@ module Ruboty
       url = 'http://great-h.github.io/events/event-%03d.html' % no
       date = DateTime.parse(attributes['datetime']).strftime('%m月%d日')
       body = "#すごい広島 #{no} は#{date}ですー。 #{url}"
-      message.reply("@#{to} #{body}")
+      message.reply(".@#{to} #{body}")
     end
   end
 end
