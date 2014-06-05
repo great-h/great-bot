@@ -1,4 +1,4 @@
-great-bot
+すごい広島 BOT
 =========
 
-twitter アカウント すごい広島 用のBOTです。
+twitter アカウント [@great_hiroshima](http://twitter.com/great_hiroshima) の中身です。
