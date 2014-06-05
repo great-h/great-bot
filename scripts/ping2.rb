@@ -8,6 +8,7 @@ module Ruboty
       Ruboty.logger.info("Handle ping2: #{message.body}")
       body = message[1]
       to = message.original[:from]
+      return if to == env["ROBOT_NAME"]
       message.reply("@#{to} #{body}")
     end
   end
