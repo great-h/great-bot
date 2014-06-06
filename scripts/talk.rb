@@ -12,15 +12,15 @@ module Ruboty
 
     def talk_to(message)
       Ruboty.logger.info("Handle talk_to: #{message.body}")
-      if message[1] == message.robot.name
+      to = message[1]
+      if to == message.robot.name
         to = message.original[:from]
         message.reply("@#{to} なにをさせようとしてるのかなぁ？")
-        return
+      else
+        body = message[2]
+        Ruboty.escape(body)
+        message.reply("@#{to} #{body}")
       end
-      to = "@" + message[1]
-      body = message[2]
-      Ruboty.escape(body)
-      message.reply("#{to} #{body}")
     end
 
     def talk(message)
