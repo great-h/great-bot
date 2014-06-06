@@ -8,7 +8,7 @@ module Ruboty
       Ruboty.logger.info("Handle ping2: #{message.body}")
       body = message[1]
       to = message.original[:from]
-      body.gsub(/@#{env['ROBOT_NAME']}/)
+      Ruboty.escape(body)
       message.reply("@#{to} #{body}")
     end
   end
