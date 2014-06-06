@@ -1,12 +1,9 @@
-logger = Ruboty.logger
-logger.debug("load: " + __FILE__)
-
 require 'open-uri'
 require 'json'
 require 'date'
 
-module Ruboty
-  class Event < Handlers::Base
+module Ruboty::Handlers
+  class Event < Base
     on /event(.*)\z/i, name: 'event', description: 'next event infomation'
     API_URL = 'http://great-h.github.io/event.json'
 

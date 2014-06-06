@@ -1,7 +1,5 @@
-logger = Ruboty.logger
-logger.debug("load: " + __FILE__)
-module Ruboty
-  class PING2 < Handlers::Base
+module Ruboty::Handlers
+  class PING2 < Base
     on /ping (.*)\z/i, name: 'ping2', description: 'sample ping'
 
     def ping2(message)

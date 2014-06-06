@@ -1,8 +1,5 @@
-logger = Ruboty.logger
-logger.debug("load: " + __FILE__)
-
-module Ruboty
-  class Help2 < Handlers::Base
+module Ruboty::Handlers
+  class Help2 < Base
     on /(help|たすけて|助けて)(.*)\z/i, name: 'help', description: 'help'
 
     URL = 'https://github.com/great-h/great-bot/wiki/help'

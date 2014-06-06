@@ -1,12 +1,11 @@
-logger = Ruboty.logger
-logger.debug("load: " + __FILE__)
-
 module Ruboty
   def self.escape(str)
     str.gsub!(/@\w+/,'')
   end
+end
 
-  class Talk < Handlers::Base
+module Ruboty::Handlers
+  class Talk < Base
     on /talk_to (.*?) (.*)\z/i, name: 'talk_to', description: 'talking bot to user'
     on /talk (.*)\z/i, name: 'talk', description: 'talking bot'
 
