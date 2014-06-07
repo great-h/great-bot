@@ -4,7 +4,7 @@ require 'ruboty'
 
 module Ruboty::HTTPd
   def call(env)
-    [200, {'Content-type' => 'text/html'}, ['すごい広島']]
+    [200, {'Content-type' => 'text/html'}, ['<!DOCTYPE html><meta charset="UTF-8"><p>すごい広島']]
   end
 end
 Ruboty::Robot.include(Ruboty::HTTPd)
