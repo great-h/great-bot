@@ -8,3 +8,6 @@ deploy:
   app: great-bot
   on:
     repo: great-h/great-bot
+notifications:
+  webhooks:
+    - https://idobata.io/hook/d36c6b5b-05cc-478d-a395-4b09d6ae7989
