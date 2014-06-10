@@ -14,7 +14,8 @@ module Ruboty::Handlers
       no = attributes['no']
       url = 'http://great-h.github.io/events/event-%03d.html' % no
       date = DateTime.parse(attributes['datetime']).strftime('%m月%d日')
-      body = "#すごい広島 #{no} は#{date}ですー。 #{url}"
+      place = attributes['place']
+      body = "#すごい広島 #{no} は#{date}ですー。 場所は #{place} だよ。 #{url}"
       message.reply(".@#{to} #{body}")
     end
   end
