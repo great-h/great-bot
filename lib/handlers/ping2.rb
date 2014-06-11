@@ -1,3 +1,5 @@
+Ruboty.handlers.delete(Ruboty::Handlers::Ping)
+
 module Ruboty::Handlers
   class PING2 < Base
     on /ping (.*)\z/i, name: 'ping2', description: 'sample ping'
