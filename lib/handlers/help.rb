@@ -1,3 +1,5 @@
+Ruboty.handlers.delete(Ruboty::Handlers::Help)
+
 module Ruboty::Handlers
   class Help2 < Base
     on /(help|たすけて|助けて)(.*)\z/i, name: 'help', description: 'help'
