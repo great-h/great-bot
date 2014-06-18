@@ -23,7 +23,7 @@ module Ruboty::Handlers
       end
       Ruboty.escape(body)
       @robot.say(
-        body: "#{name} #{body}",
+        body: "@#{name} #{body}",
         original: {tweet: tweet})
     end
   end
