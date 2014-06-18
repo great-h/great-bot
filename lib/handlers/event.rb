@@ -18,7 +18,7 @@ module Ruboty::Handlers
       attributes = JSON.parse(open(API_URL).read)
       no = attributes['no']
       url = 'http://great-h.github.io/events/event-%03d.html' % no
-      date = DateTime.parse(attributes['datetime']).strftime('%m月%d日')
+      date = DateTime.parse(attributes['datetime']).strftime('%-m月%-d日')
       place = attributes['place']
       body = "#すごい広島 #{no} は#{date}#{suffix}。 場所は #{place} #{suffix}。 #{url}"
       message.reply(".@#{to} #{body}")
