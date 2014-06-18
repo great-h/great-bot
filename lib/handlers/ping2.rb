@@ -21,6 +21,7 @@ module Ruboty::Handlers
         tweet = @robot.send(:client).status(status_id)
         name = tweet.user.screen_name
       end
+      Ruboty.escape(body)
       @robot.say(body: "#{name} #{body}", in_reply_to_status_id: status_id)
     end
   end
