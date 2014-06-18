@@ -9,7 +9,7 @@ module Ruboty::Handlers
     SUFFIX_PATTERN = %w{ですよー ですー だよ じゃけぇ よ ですにゅ ですわ}
 
     def suffix
-      SUFFIX_PATTERN.shuffle.first
+      SUFFIX_PATTERN.sample
     end
 
     def event(message)
