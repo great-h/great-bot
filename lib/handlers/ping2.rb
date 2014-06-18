@@ -18,7 +18,7 @@ module Ruboty::Handlers
       body = message[2]
       adapter = @robot.send(:adapter)
       if adapter.class == Ruboty::Adapters::Twitter
-        tweet = @robot.send(:client).status(status_id)
+        tweet = adapter.send(:client).status(status_id)
         name = tweet.user.screen_name
       end
       Ruboty.escape(body)
