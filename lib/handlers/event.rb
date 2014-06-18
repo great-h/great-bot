@@ -4,7 +4,7 @@ require 'date'
 
 module Ruboty::Handlers
   class Event < Base
-    on /event(.*)\z/i, name: 'event', description: 'next event infomation'
+    on /(.*)(イベント|event)/i, name: 'event', description: 'next event infomation'
     API_URL = 'http://great-h.github.io/event.json'
 
     def event(message)
