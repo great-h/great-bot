@@ -22,7 +22,9 @@ module Ruboty::Handlers
         name = tweet.user.screen_name
       end
       Ruboty.escape(body)
-      @robot.say(body: "#{name} #{body}", in_reply_to_status_id: status_id)
+      @robot.say(
+        body: "#{name} #{body}",
+        original: {tweet: tweet})
     end
   end
 end
