@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'thread'
+ENV['RUBOTY_ENV'] = ENV['RACK_ENV'] || 'development'
+
 require 'ruboty'
 
 module Ruboty::HTTPd
@@ -9,8 +11,8 @@ module Ruboty::HTTPd
 end
 Ruboty::Robot.include(Ruboty::HTTPd)
 
-environment = ENV['RACK_ENV'] || 'development'
-robot = Ruboty::Robot.new(load: environment + '.rb')
+robot = Ruboty::Robot.new(load: 'user_script.rb')
+puts Ruboty::AdapterBuilder.adapter_classes
 
 
 Thread.new do

@@ -22,7 +22,7 @@ describe Ruboty::Handlers::Talk do
     end
 
     it 'return goro from talk goro' do
-      robot.should_receive(:say).with(
+      allow(robot).to receive(:say).with(
         body: replied,
         from: to,
         to: from,

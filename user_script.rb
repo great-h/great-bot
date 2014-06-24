@@ -1,4 +1,12 @@
 logger = Ruboty.logger
+
+if ENV['RUBOTY_ENV'] == 'development'
+  logger.level =  Logger::DEBUG
+else
+  require 'newrelic_rpm'
+  Ruboty.handlers = Ruboty.handlers - [Ruboty::Handlers::Help]
+end
+
 logger.debug('load: ' + __FILE__)
 
 Dir.glob('lib/handlers/**') do |path|
