@@ -18,7 +18,7 @@ module Ruboty::Handlers
       else
         body = message[2]
         Ruboty.escape(body)
-        message.reply("@#{to} #{body} #すごい広島")
+        message.reply("@#{to} #{body}")
       end
     end
 
@@ -26,7 +26,7 @@ module Ruboty::Handlers
       Ruboty.logger.info("Handle talk: #{message.body}")
       body = message[1]
       Ruboty.escape(body)
-      message.reply("#{body}")
+      message.reply("#{body} #すごい広島")
     end
   end
 end
