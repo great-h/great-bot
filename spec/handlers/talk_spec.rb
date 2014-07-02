@@ -10,7 +10,7 @@ describe Ruboty::Handlers::Talk do
     end
 
     let(:replied) do
-      'goro'
+      'goro #すごい広島'
     end
 
     let(:to) do
