@@ -18,7 +18,7 @@ module Ruboty::Handlers
       else
         body = message[2]
         Ruboty.escape(body)
-        message.reply("@#{to} #{body}")
+        message.reply("@#{to} #{body} #すごい広島")
       end
     end
 
