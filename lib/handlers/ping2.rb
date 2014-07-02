@@ -17,13 +17,18 @@ module Ruboty::Handlers
       status_id = message[1]
       body = message[2]
       adapter = @robot.send(:adapter)
-      if adapter.class == Ruboty::Adapters::Twitter
+      users = []
+
+      adapter_klass = Ruboty::Adapters::Twitter rescue adatper_klass = nil
+      if adapter.class == adapter_klass
         tweet = adapter.send(:client).status(status_id)
-        name = tweet.user.screen_name
+        users << "@" + tweet.user.screen_name
+        users += tweet.text.split.delete_if { |name| not name.match(/^@\w+/) }
       end
+      users.uniq!
       Ruboty.escape(body)
       @robot.say(
-        body: "@#{name} #{body}",
+        body: "#{users.join(' ')} #{body}",
         original: {tweet: tweet})
     end
   end
