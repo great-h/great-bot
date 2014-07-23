@@ -9,7 +9,7 @@ end
 
 logger.debug('load: ' + __FILE__)
 
-Dir.glob('lib/handlers/**') do |path|
+Dir.glob("lib/handlers/**.rb") do |path|
   logger.debug("load: " + path)
   require_relative path
 end
