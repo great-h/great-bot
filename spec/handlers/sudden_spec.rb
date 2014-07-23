@@ -9,7 +9,7 @@ describe Ruboty::Handlers::Sudden do
       <<-STRING.chop
 ＿人人人人人人人＿
 ＞　すごい広島　＜
-￣Y^Y^Y^Y^Y^Y^Y￣
+￣ＹＹＹＹＹＹＹ￣
       STRING
     end
     it { is_expected.to eq(result) }

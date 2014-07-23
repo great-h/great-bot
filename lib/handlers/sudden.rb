@@ -14,11 +14,11 @@ module Ruboty::Handlers
         char.ascii_only? ? total + 1 : total + 2
       end
       top = "人" * (len / 2 + 2)
-      bottom = "^Y" * (len / 2 + 1)
+      bottom = "Ｙ" * (len / 2 + 2)
       <<-STRING.chop
 ＿#{top}＿
 ＞　#{string}　＜
-￣Y#{bottom}￣
+￣#{bottom}￣
       STRING
     end
   end
