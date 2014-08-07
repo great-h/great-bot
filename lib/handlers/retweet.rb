@@ -5,6 +5,9 @@ module Ruboty::Handlers
     def retweet(message)
       Ruboty.logger.info("Handle retweet: #{message.body}")
       tweet_id = message[2]
+      if /^(http|https):\/\/(.*)\/(\d+)$/ =~ tweet_id
+        tweet_id = $3
+      end
       to = message.original[:from]
       adapter = @robot.send(:adapter)
 
