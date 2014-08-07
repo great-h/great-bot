@@ -17,7 +17,7 @@ module Ruboty::Handlers
         begin
           client.retweet tweet_id
         rescue Twitter::Error::NotFound
-          message.reply("@#{to} tweet ID #{message[2]} を RT しようとして失敗しました。")
+          message.reply("@#{to} tweet ID #{tweet_id} を RT しようとして失敗しました。")
         end
       end
     end
