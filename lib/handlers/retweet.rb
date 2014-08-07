@@ -1,5 +1,5 @@
 module Ruboty::Handlers
-  class Sudden < Base
+  class Retweet < Base
     on /(RT|retweet) (.*)\z/i, name: "retweet", description: "Retweet"
 
     def retweet(message)
