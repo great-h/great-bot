@@ -6,6 +6,7 @@ deploy:
   api_key:
     secure: x3gG428uqZrgbnwvV3wZ1xK9mjT4kFisSsbTIibkMHHMydE4hy6xgn3nPh/XClw9LSCTAw5cSSgPUOK4zhasVxqF0Uwj/HAHloiUqLWbaqXLL67eKL2ZM0vJJaWL83dq2yVtvU0pFQZnwXqcNI8iOa4RoWdWgkqXtQzHawkR2tA=
   app: great-bot
+  strategy: git
   on:
     repo: great-h/great-bot
 notifications:
